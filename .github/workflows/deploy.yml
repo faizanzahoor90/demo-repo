@@ -1,0 +1,15 @@
+name: Demo CI/CD Pipeline
+on:
+  push:
+    branches: [ "main" ]
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Show files
+        run: |
+          echo "Pipeline triggered by push from Faizan"
+          pwd
+          ls -R
